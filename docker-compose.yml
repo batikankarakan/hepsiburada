@@ -66,3 +66,5 @@ services:
       - MYSQL_USER=admin
       - MYSQL_PASSWORD=admin
       - MYSQL_ROOT_PASSWORD=admin
+    ports:
+      - "8992:3306"

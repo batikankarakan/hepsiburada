@@ -496,8 +496,11 @@ class ComposerStaticInit1a57ab777c127c17e1cc518d9893d9b4
     );
 
     public static $classMap = array (
+        'AddProductSeeder' => __DIR__ . '/../..' . '/database/seeds/AddProductSeeder.php',
+        'App\\AddProduct' => __DIR__ . '/../..' . '/app/AddProduct.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
+        'App\\Http\\Controllers\\AddProductController' => __DIR__ . '/../..' . '/app/Http/Controllers/AddProductController.php',
         'App\\Http\\Controllers\\Auth\\ConfirmPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ConfirmPasswordController.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
         'App\\Http\\Controllers\\Auth\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/LoginController.php',
