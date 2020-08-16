@@ -90,15 +90,15 @@ class AddProductController extends Controller
     /**
      * Remove the specified resource from storage.
      *
+     * @param $id
      * @param \App\AddProduct $addProduct
      * @return \Illuminate\Http\RedirectResponse
      * @throws \Exception
      */
-    public function destroy($id, AddProduct $addProduct)
+    public function destroy($id)
     {
-        $addProduct->delete();
+        AddProduct::find($id)->delete();
         return redirect()->route('listProducts', [
-            'id' => $id,
         ]);
     }
 }

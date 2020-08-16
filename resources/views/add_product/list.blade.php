@@ -11,6 +11,12 @@
                             <h5 class="card-title"> {{ $product->Name }}</h5>
                             <p class="card-text">{{ $product->Price }}</p>
                         </div>
+                        <form action="{{ route('removeProduct', [
+                            'id' => $product->id,
+                        ])}}" method="POST">
+                            @csrf
+                            <button type="submit" class="btn btn-link btn-sm float-right">Remove</button>
+                        </form>
                     </div>
                 @endforeach
             </div>
