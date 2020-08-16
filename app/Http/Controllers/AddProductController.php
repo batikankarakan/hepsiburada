@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\AddProduct;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class AddProductController extends Controller
 {
@@ -46,6 +47,7 @@ class AddProductController extends Controller
         $product = new AddProduct($values);
         $product->save();
 
+
         return redirect()->route('listProducts', [
         ]);
     }
@@ -58,7 +60,7 @@ class AddProductController extends Controller
      */
     public function show(AddProduct $addProduct)
     {
-        $products = AddProduct::all();
+        $products = DB::table('add_products')->paginate(5);
         return view('add_product.list', [
             'products' => $products,
         ]);

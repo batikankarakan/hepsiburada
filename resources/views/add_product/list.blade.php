@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col-md-8">
+            <ul class="col-md-8">
                 @foreach($products as $product)
                     <div class="card mt-2" style="width: 18rem;">
                         <img src="..." class="card-img-top" alt="...">
@@ -19,7 +19,10 @@
                         </form>
                     </div>
                 @endforeach
+            <div class="mt-2">
+                {{ $products->links() }}
             </div>
         </div>
+    </div>
     </div>
 @endsection
