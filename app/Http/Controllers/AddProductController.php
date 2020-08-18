@@ -3,9 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\AddProduct;
+use DOMDocument;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
+use Sunra\PhpSimple\HtmlDomParser;
+
 
 class AddProductController extends Controller
 {
@@ -60,6 +64,20 @@ class AddProductController extends Controller
      */
     public function show(AddProduct $addProduct)
     {
+
+        $content = Storage::get('link1.html');
+        libxml_clear_errors();
+
+        $doc = new DOMDocument();
+        libxml_use_internal_errors(true);
+        $doc->loadHTML($content);
+        $doms = $doc->getElementsByTagName('title');
+
+        foreach ($doms as $dom) {
+            dd($dom->nodeValue);
+            die();
+        }
+
         $products = DB::table('add_products')->paginate(5);
         return view('add_product.list', [
             'products' => $products,
