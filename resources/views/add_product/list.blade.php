@@ -6,7 +6,7 @@
             <ul class="col-md-8">
                 @foreach($products as $product)
                     <div class="card mt-2" style="width: 18rem;">
-                        <img src="..." class="card-img-top" alt="...">
+                        <img src="{{$product->ImageLink}}" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title"> {{ $product->Name }}</h5>
                             <p class="card-text">{{ $product->Price }}</p>

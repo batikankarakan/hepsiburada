@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="84f1be53-8e25-4758-a056-70739835fe82" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AddProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AddProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
-    </list>
+    <list default="true" id="84f1be53-8e25-4758-a056-70739835fe82" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -162,6 +153,7 @@
       <workItem from="1597572002050" duration="8048000" />
       <workItem from="1597658161096" duration="1655000" />
       <workItem from="1597746805963" duration="10310000" />
+      <workItem from="1597918795152" duration="12793000" />
     </task>
     <servers />
   </component>
@@ -169,6 +161,10 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="589" y="235" width="732" height="644" key="#Inspections" timestamp="1597935666505">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="589" y="235" width="732" height="644" key="#Inspections/0.27.1920.1053@0.27.1920.1053" timestamp="1597935666505" />
     <state x="1120" y="155" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597494571139">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -186,19 +182,23 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="658" y="273" width="593" height="568" key="NewPhpClassDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1597660546741" />
-    <state x="651" y="292" width="618" height="522" key="find.popup" timestamp="1597750199842">
+    <state x="741" y="468" width="428" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597933552000">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="651" y="292" width="618" height="522" key="find.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1597750199842" />
+    <state x="741" y="468" width="428" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.1920.1053@0.27.1920.1053" timestamp="1597933552000" />
+    <state x="651" y="292" width="618" height="548" key="find.popup" timestamp="1597937679038">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="651" y="292" width="618" height="548" key="find.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1597937679038" />
     <state x="624" y="252" key="run.anything.popup" timestamp="1597580848067">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="624" y="252" key="run.anything.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1597580848067" />
-    <state x="623" y="280" width="672" height="662" key="search.everywhere.popup" timestamp="1597750209399">
+    <state x="623" y="280" width="672" height="662" key="search.everywhere.popup" timestamp="1597937684343">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="623" y="1339" width="672" height="678" key="search.everywhere.popup/0.1080.1920.1080/0.0.1920.1080@0.1080.1920.1080" timestamp="1597437464111" />
-    <state x="623" y="280" width="672" height="662" key="search.everywhere.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1597750209399" />
+    <state x="623" y="280" width="672" height="662" key="search.everywhere.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1597937684343" />
     <state x="685" y="1547" width="540" height="179" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1597526870989">
       <screen x="0" y="1080" width="1920" height="1080" />
     </state>

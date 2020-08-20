@@ -4,10 +4,12 @@ namespace App\Http\Controllers;
 
 use App\AddProduct;
 use DOMDocument;
+use http\Exception\RuntimeException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
+use mysql_xdevapi\Exception;
 use Sunra\PhpSimple\HtmlDomParser;
 
 
@@ -41,19 +43,20 @@ class AddProductController extends Controller
      */
     public function store(Request $request)
     {
+        $productDetails = $this->fetchProductFromLink($request->get('link'));
+
         $values = [
             'user_id' => Auth::id(),
-            'Name' => $request->get('Name'),
-            'ImageLink' => $request->get('ImageLink'),
-            'Price' => $request->get('Price')
+            'Name' => $productDetails['productName'],
+            'ImageLink' => $productDetails['productImage'],
+            'Price' => $productDetails['productPrice']
         ];
 
         $product = new AddProduct($values);
         $product->save();
 
 
-        return redirect()->route('listProducts', [
-        ]);
+        return redirect()->route('listProducts');
     }
 
     /**
@@ -64,23 +67,56 @@ class AddProductController extends Controller
      */
     public function show(AddProduct $addProduct)
     {
-        $content = Storage::get('link1.html');
+        $products = DB::table('add_products')->paginate(5);
+        return view('add_product.list', [
+            'products' => $products,
+        ]);
+    }
+
+    private function fetchProductFromLink(string $link)
+    {
+        $content = file_get_contents($link);
 
         $doc = new DOMDocument();
         libxml_use_internal_errors(true);
         $doc->loadHTML($content);
         $finder = new \DOMXPath($doc);
-        $productName = $finder->query("//*[contains(@class, 'product-name')]")->item(0);
-        $productPrice = $finder->query("//*[contains(@id, 'offering-price')]")->item(0);
-        $productImage = $finder->query("//*[contains(@class, 'product-image')]")->item(2);
-        $productImageLink = $productImage->getAttribute('src');
-        dd($productName->nodeValue, $productPrice->nodeValue, $productImageLink);
-        die();
 
-        $products = DB::table('add_products')->paginate(5);
-        return view('add_product.list', [
-            'products' => $products,
-        ]);
+        $productNameNode = $finder->query("//*[contains(@class, 'product-name')]")->item(0);
+        if (!$productNameNode) {
+            throw new RuntimeException("Product name cannot be found.");
+        }
+
+        $productName = $productNameNode->nodeValue;
+        if (!$productName) {
+            throw new RuntimeException('Product name is empty.');
+        }
+
+        $productPriceNode = $finder->query("//*[contains(@id, 'offering-price')]")->item(0);
+        if (!$productPriceNode) {
+            throw new RuntimeException('Product price cannot be found.');
+        }
+
+        $productPrice = (float)$productPriceNode->getAttribute('content');
+        if (!$productPrice) {
+            throw new RuntimeException('Product price node does not have a content attribute.');
+        }
+
+        $productImageNode = $finder->query("//*[contains(@class, 'product-image')]")->item(2);
+        if (!$productImageNode) {
+            throw new RuntimeException('Product image link cannot be found.');
+        }
+
+        $productImage = $productImageNode->getAttribute('src');
+        if (!$productImage) {
+            throw new RuntimeException('Product image link does not have a src attribute.');
+        }
+
+        return [
+            'productName' => $productName,
+            'productPrice' => $productPrice,
+            'productImage' => $productImage,
+        ];
     }
 
     /**
