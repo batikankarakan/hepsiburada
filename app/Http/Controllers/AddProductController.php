@@ -64,19 +64,18 @@ class AddProductController extends Controller
      */
     public function show(AddProduct $addProduct)
     {
-
         $content = Storage::get('link1.html');
-        libxml_clear_errors();
 
         $doc = new DOMDocument();
         libxml_use_internal_errors(true);
         $doc->loadHTML($content);
-        $doms = $doc->getElementsByTagName('title');
-
-        foreach ($doms as $dom) {
-            dd($dom->nodeValue);
-            die();
-        }
+        $finder = new \DOMXPath($doc);
+        $productName = $finder->query("//*[contains(@class, 'product-name')]")->item(0);
+        $productPrice = $finder->query("//*[contains(@id, 'offering-price')]")->item(0);
+        $productImage = $finder->query("//*[contains(@class, 'product-image')]")->item(2);
+        $productImageLink = $productImage->getAttribute('src');
+        dd($productName->nodeValue, $productPrice->nodeValue, $productImageLink);
+        die();
 
         $products = DB::table('add_products')->paginate(5);
         return view('add_product.list', [

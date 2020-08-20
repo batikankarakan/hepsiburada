@@ -16,8 +16,7 @@
         "laravel/tinker": "^2.0",
         "laravel/ui": "^2.1",
         "sunra/php-simple-html-dom-parser": "^1.5",
-      "ext-dom": "*",
-
+        "ext-dom": "*"
     },
     "require-dev": {
         "facade/ignition": "^2.0",

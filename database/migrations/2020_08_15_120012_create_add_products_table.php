@@ -13,7 +13,7 @@ class CreateAddProductsTable extends Migration
      */
     public function up()
     {
-        Schema::table('add_products', function (Blueprint $table) {
+        Schema::create('add_products', function (Blueprint $table) {
             $table->id();
             $table->string('Name')->nullable();
             $table->longText('ImageLink')->nullable();
