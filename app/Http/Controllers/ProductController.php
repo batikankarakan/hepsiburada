@@ -19,7 +19,8 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Auth::user()->products()->paginate(5);
+        $products = Auth::user()->products()->paginate(10);
+
         return view('add_product.list', [
             'products' => $products,
         ]);
@@ -46,12 +47,12 @@ class ProductController extends Controller
         $request->validate([
             'link' => 'required|min:20|max:65536|url|starts_with:https://www.hepsiburada.com'
         ]);
+
         try {
-        $productDetails = $this->fetchProductFromLink($request->get('link'));
-        }catch (\Throwable $exception){
+            $productDetails = $this->fetchProductFromLink($request->get('link'));
+        } catch (\Throwable $exception) {
             throw ValidationException::withMessages(['link' => 'Product details cannot be fetched.']);
         }
-
 
         $values = [
             'user_id' => Auth::id(),
@@ -61,10 +62,8 @@ class ProductController extends Controller
             'price' => $productDetails['productPrice']
         ];
 
-
         $product = new Product($values);
         $product->save();
-
 
         return redirect()->route('products.index');
     }
@@ -77,8 +76,8 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
+        $users_product = Product::where('user_id', '=', Auth::id())->where('id', '=', $id)->delete();
 
-        Product::find($id)->delete();
         return redirect()->route('products.index', [
         ]);
     }
