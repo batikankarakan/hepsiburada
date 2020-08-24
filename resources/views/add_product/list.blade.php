@@ -6,7 +6,7 @@
             <ul class="col-md-8">
                 @if(count($products) > 0)
                     @foreach($products as $product)
-                        <div class="card mb-3" style="max-width: 540px;">
+                        <div class="card mb-3">
                             <div class="row no-gutters">
                                 <div class="col-md-4">
                                     <img src="{{ $product->image }}" class="card-img" alt="...">
@@ -14,20 +14,21 @@
                                 <div class="col-md-8">
 
                                     <div class="card-body">
-                                        <h5 class="card-title"><b>{{ $product->name }}</b></h5>
-                                        <p class="card-text" style="font-size: large">{{ $product->price }} TL</p>
-                                    </div>
+                                        <h3 class="card-title">{{ $product->name }}</h3>
+                                        <h5 class="pt-4 card-text"><b>Price:</b> {{ $product->price }} TL</h5>
 
-                                    <form action="{{ route('products.destroy', [
-                            'product' => $product->id,
-                        ])}}" method="POST">
-                                        @csrf
-                                        @method('DELETE')
-                                        <button type="submit" class="btn btn-danger btn-sm float-right mt-3 mr-2">
-                                            Remove
-                                        </button>
-                                    </form>
+                                    </div>
                                 </div>
+                            </div>
+
+                            <div class="card-footer text-muted">
+                                <form action="{{ route('products.destroy', ['product' => $product->id])}}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-danger float-right">
+                                        Remove
+                                    </button>
+                                </form>
                             </div>
                         </div>
                     @endforeach
