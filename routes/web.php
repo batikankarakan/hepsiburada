@@ -19,10 +19,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::group(['middleware' => ['web']], function () {
-    Route::get('/home', 'HomeController@index')->name('home');
-    Route::post('/addedProduct', 'AddProductController@store')->name('addProduct');
-    Route::post('/removeProduct/{id}', 'AddProductController@destroy')->name('removeProduct');
-    Route::get('/add', 'AddProductController@index')->name('add');
-    Route::get('/list', 'AddProductController@show')->name('listProducts');
+Route::group(['middleware' => ['web', 'auth']], function () {
+    Route::post('/removeProduct/{id}', 'ProductController@destroy')->name('removeProduct');
+    Route::resource('/products', 'ProductController')->except(['show', 'edit', 'update']);
 });

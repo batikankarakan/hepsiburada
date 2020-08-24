@@ -23,13 +23,13 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container nav nav-pills nav-fill">
-                <a class="navbar-brand" href="{{ url('/add') }}">
+                <a class="navbar-brand" href="{{ url('/products/create') }}">
                     Add Product
                 </a>
                 <a class="navbar-brand">
                     |
                 </a>
-                <a class="navbar-brand" href="{{ url('/list') }}">
+                <a class="navbar-brand" href="{{ url('/products') }}">
                     List Product
                 </a>
 

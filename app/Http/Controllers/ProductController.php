@@ -3,15 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\AddProduct;
+use App\Product;
 use DOMDocument;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Storage;
-use Sunra\PhpSimple\HtmlDomParser;
+use Illuminate\Validation\ValidationException;
 
-
-class AddProductController extends Controller
+class ProductController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -20,17 +19,20 @@ class AddProductController extends Controller
      */
     public function index()
     {
-        return view('add_product.add');
+        $products = Auth::user()->products()->paginate(5);
+        return view('add_product.list', [
+            'products' => $products,
+        ]);
     }
 
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Http\Response|\Illuminate\View\View
      */
     public function create()
     {
-        //
+        return view('add_product.add');
     }
 
     /**
@@ -41,33 +43,43 @@ class AddProductController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'link' => 'required|min:20|max:65536|url|starts_with:https://www.hepsiburada.com'
+        ]);
+        try {
         $productDetails = $this->fetchProductFromLink($request->get('link'));
+        }catch (\Throwable $exception){
+            throw ValidationException::withMessages(['link' => 'Product details cannot be fetched.']);
+        }
+
 
         $values = [
             'user_id' => Auth::id(),
-            'Name' => $productDetails['productName'],
-            'ImageLink' => $productDetails['productImage'],
-            'Price' => $productDetails['productPrice']
+            'name' => $productDetails['productName'],
+            'image' => $productDetails['productImage'],
+            'link' => $request->get('link'),
+            'price' => $productDetails['productPrice']
         ];
 
-        $product = new AddProduct($values);
+
+        $product = new Product($values);
         $product->save();
 
 
-        return redirect()->route('listProducts');
+        return redirect()->route('products.index');
     }
 
     /**
-     * Display the specified resource.
+     * Remove the specified resource from storage.
      *
-     * @param \App\AddProduct $addProduct
-     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Http\Response|\Illuminate\View\View
+     * @param \App\Product $product
+     * @return \Illuminate\Http\RedirectResponse
      */
-    public function show(AddProduct $addProduct)
+    public function destroy($id)
     {
-        $products = DB::table('add_products')->paginate(5);
-        return view('add_product.list', [
-            'products' => $products,
+
+        Product::find($id)->delete();
+        return redirect()->route('products.index', [
         ]);
     }
 
@@ -115,43 +127,5 @@ class AddProductController extends Controller
             'productPrice' => $productPrice,
             'productImage' => $productImage,
         ];
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param \App\AddProduct $addProduct
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(AddProduct $addProduct)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param \Illuminate\Http\Request $request
-     * @param \App\AddProduct $addProduct
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, AddProduct $addProduct)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param $id
-     * @param \App\AddProduct $addProduct
-     * @return \Illuminate\Http\RedirectResponse
-     * @throws \Exception
-     */
-    public function destroy($id)
-    {
-        AddProduct::find($id)->delete();
-        return redirect()->route('listProducts', [
-        ]);
     }
 }
