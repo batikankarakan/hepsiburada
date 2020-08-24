@@ -7,9 +7,11 @@
     <list default="true" id="84f1be53-8e25-4758-a056-70739835fe82" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/add_product/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/add_product/list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/brick/math/.github/FUNDING.yml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/brick/math/src/BigDecimal.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/brick/math/src/BigDecimal.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vendor/brick/math/src/BigInteger.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/brick/math/src/BigInteger.php" afterDir="false" />
@@ -211,7 +213,7 @@
       <workItem from="1597746805963" duration="10310000" />
       <workItem from="1597918795152" duration="12793000" />
       <workItem from="1597954450364" duration="7031000" />
-      <workItem from="1598271008235" duration="20529000" />
+      <workItem from="1598271008235" duration="21035000" />
     </task>
     <servers />
   </component>
