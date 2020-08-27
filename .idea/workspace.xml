@@ -5,60 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="84f1be53-8e25-4758-a056-70739835fe82" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/40a35531-4957-489c-b065-23560d17f4aa.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/40a35531-4957-489c-b065-23560d17f4aa.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/hepsiburada.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/hepsiburada.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/add_product/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/add_product/list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/brick/math/.github/FUNDING.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/brick/math/src/BigDecimal.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/brick/math/src/BigDecimal.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/brick/math/src/BigInteger.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/brick/math/src/BigInteger.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/brick/math/src/BigNumber.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/brick/math/src/BigNumber.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/brick/math/src/Exception/DivisionByZeroException.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/brick/math/src/Exception/DivisionByZeroException.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/brick/math/src/Exception/MathException.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/brick/math/src/Exception/MathException.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/brick/math/src/Internal/Calculator.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/brick/math/src/Internal/Calculator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/brick/math/src/Internal/Calculator/BcMathCalculator.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/brick/math/src/Internal/Calculator/BcMathCalculator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/brick/math/src/Internal/Calculator/GmpCalculator.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/brick/math/src/Internal/Calculator/GmpCalculator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/brick/math/src/Internal/Calculator/NativeCalculator.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/brick/math/src/Internal/Calculator/NativeCalculator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/league/commonmark/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/league/commonmark/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/league/commonmark/src/CommonMarkConverter.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/league/commonmark/src/CommonMarkConverter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/league/commonmark/src/Extension/Footnote/Event/AnonymousFootnotesListener.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/league/commonmark/src/Extension/Footnote/Event/AnonymousFootnotesListener.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/league/commonmark/src/Extension/Footnote/Event/GatherFootnotesListener.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/league/commonmark/src/Extension/Footnote/Event/GatherFootnotesListener.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/league/commonmark/src/Extension/Footnote/Parser/AnonymousFootnoteRefParser.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/league/commonmark/src/Extension/Footnote/Parser/AnonymousFootnoteRefParser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/league/commonmark/src/Extension/Footnote/Parser/FootnoteRefParser.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/league/commonmark/src/Extension/Footnote/Parser/FootnoteRefParser.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/league/commonmark/src/Extension/HeadingPermalink/HeadingPermalinkProcessor.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/league/commonmark/src/Extension/HeadingPermalink/HeadingPermalinkProcessor.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/league/flysystem/src/Adapter/AbstractFtpAdapter.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/league/flysystem/src/Adapter/AbstractFtpAdapter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/league/flysystem/src/Adapter/Ftp.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/league/flysystem/src/Adapter/Ftp.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/league/flysystem/src/Adapter/Ftpd.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/league/flysystem/src/Adapter/Ftpd.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/league/flysystem/src/Filesystem.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/league/flysystem/src/Filesystem.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/league/flysystem/src/Util/MimeType.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/league/flysystem/src/Util/MimeType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/nesbot/carbon/src/Carbon/Carbon.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/nesbot/carbon/src/Carbon/Carbon.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/nesbot/carbon/src/Carbon/CarbonInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/nesbot/carbon/src/Carbon/CarbonInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/nesbot/carbon/src/Carbon/Lang/ast.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/nesbot/carbon/src/Carbon/Lang/ast.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/nesbot/carbon/src/Carbon/Lang/ast_ES.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/nesbot/carbon/src/Carbon/Lang/ast_ES.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/nesbot/carbon/src/Carbon/Lang/et.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/nesbot/carbon/src/Carbon/Lang/et.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/nesbot/carbon/src/Carbon/Lang/he.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/nesbot/carbon/src/Carbon/Lang/he.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/nesbot/carbon/src/Carbon/Traits/Converter.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/nesbot/carbon/src/Carbon/Traits/Converter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/grammar/php7.y" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/grammar/php7.y" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/grammar/tokens.y" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/grammar/tokens.y" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Lexer.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Lexer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Arg.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Arg.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/Throw_.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Node/Stmt/Throw_.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Parser/Php5.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Parser/Php5.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Parser/Php7.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Parser/Php7.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Parser/Tokens.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/Parser/Tokens.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/ParserAbstract.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/ParserAbstract.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/PrettyPrinter/Standard.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/PrettyPrinter/Standard.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/PrettyPrinterAbstract.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/nikic/php-parser/lib/PhpParser/PrettyPrinterAbstract.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock/src/DocBlock/Tags/InvalidTag.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock/src/DocBlock/Tags/InvalidTag.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ramsey/uuid/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ramsey/uuid/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/ramsey/uuid/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/ramsey/uuid/composer.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,6 +131,7 @@
       <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
       <path value="$PROJECT_DIR$/vendor/psr/http-message" />
       <path value="$PROJECT_DIR$/vendor/sunra/php-simple-html-dom-parser" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-client" />
     </include_path>
   </component>
   <component name="ProjectId" id="1g6X65MVSDBhxTXsW8jJgQXzM96" />
@@ -213,7 +168,8 @@
       <workItem from="1597746805963" duration="10310000" />
       <workItem from="1597918795152" duration="12793000" />
       <workItem from="1597954450364" duration="7031000" />
-      <workItem from="1598271008235" duration="21035000" />
+      <workItem from="1598271008235" duration="21604000" />
+      <workItem from="1598521618858" duration="10218000" />
     </task>
     <servers />
   </component>
@@ -246,6 +202,10 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="658" y="273" width="593" height="568" key="NewPhpClassDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1597660546741" />
+    <state x="829" y="443" width="367" height="255" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1" timestamp="1598528677695">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="829" y="443" width="367" height="255" key="com.intellij.database.actions.DdlActions$DeleteProvider2$1/0.27.1920.1053@0.27.1920.1053" timestamp="1598528677695" />
     <state x="741" y="468" width="428" height="177" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1597933552000">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -258,11 +218,11 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="624" y="252" key="run.anything.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1597580848067" />
-    <state x="623" y="1339" width="672" height="678" key="search.everywhere.popup" timestamp="1598307273615">
-      <screen x="0" y="1080" width="1920" height="1080" />
+    <state x="623" y="280" width="672" height="662" key="search.everywhere.popup" timestamp="1598521815589">
+      <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="623" y="1339" width="672" height="678" key="search.everywhere.popup/0.1080.1920.1080/0.0.1920.1080@0.1080.1920.1080" timestamp="1598307273615" />
-    <state x="623" y="280" width="672" height="662" key="search.everywhere.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1597937684343" />
+    <state x="623" y="280" width="672" height="662" key="search.everywhere.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1598521815589" />
     <state x="685" y="1547" width="540" height="179" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1597959793750">
       <screen x="0" y="1080" width="1920" height="1080" />
     </state>

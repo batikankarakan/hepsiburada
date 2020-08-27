@@ -29,6 +29,9 @@
                                         Remove
                                     </button>
                                 </form>
+                                <a class="btn btn-primary" onclick="window.open('{{ $product->link }}', '_blank')" role="button">Go Product</a>
+
+
                             </div>
                         </div>
                     @endforeach
