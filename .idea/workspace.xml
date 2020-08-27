@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="84f1be53-8e25-4758-a056-70739835fe82" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/40a35531-4957-489c-b065-23560d17f4aa.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/40a35531-4957-489c-b065-23560d17f4aa.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/hepsiburada.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/hepsiburada.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/add_product/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/add_product/list.blade.php" afterDir="false" />
-    </list>
+    <list default="true" id="84f1be53-8e25-4758-a056-70739835fe82" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -169,7 +160,7 @@
       <workItem from="1597918795152" duration="12793000" />
       <workItem from="1597954450364" duration="7031000" />
       <workItem from="1598271008235" duration="21604000" />
-      <workItem from="1598521618858" duration="10218000" />
+      <workItem from="1598521618858" duration="10576000" />
     </task>
     <servers />
   </component>
