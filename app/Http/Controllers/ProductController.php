@@ -231,13 +231,11 @@ class ProductController extends Controller
         if (!$productImageNode) {
             throw new \RuntimeException('Product image link cannot be found.');
         }
-
-        if($productImageNode->getElementsByTagName('a') !== 0){
+        if(count($productImageNode->getElementsByTagName('a')) !== 0){
          $productImage = $productImageNode->getElementsByTagName('a')->item(0)->getAttribute('href');
 
-        } else if ($productImageNode->getElementsByTagName('img') !== 0){
+        } else if (count($productImageNode->getElementsByTagName('img')) !== 0){
             $productImage = $productImageNode->getElementsByTagName('img')->item(0)->getAttribute('data-original');
-            dd($productImage);
         }
 
 
