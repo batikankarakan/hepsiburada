@@ -52,25 +52,34 @@ class ProductController extends Controller
         $trendyol = strpos(strval($request), 'trendyol');
         $hepsiburada = strpos(strval($request), 'hepsiburada');
         $n11 = strpos(strval($request), 'n11');
-        if ($hepsiburada == false && $n11 == false) {
+        $gittigidiyor = strpos(strval($request), 'gittigidiyor');
+
+        if ($trendyol == true) {
             try {
                 $productDetails = $this->fetchTrendyolProductFromLink($request->get('link'));
             } catch (\Throwable $exception) {
                 throw ValidationException::withMessages(['link' => 'Product details cannot be fetched.']);
             }
 
-        } else if ($trendyol == false && $n11 == false) {
+        } else if ($hepsiburada == true) {
             try {
                 $productDetails = $this->fetchHepsiBuradaProductFromLink($request->get('link'));
             } catch (\Throwable $exception) {
                 throw ValidationException::withMessages(['link' => 'Product details cannot be fetched.']);
             }
-        } else
+        } else if ($n11 == true) {
             try {
                 $productDetails = $this->fetchN11ProductFromLink($request->get('link'));
             } catch (\Throwable $exception) {
                 throw ValidationException::withMessages(['link' => 'Product details cannot be fetched.']);
             }
+        } else if ($gittigidiyor == true){
+            try {
+                $productDetails = $this->fetchGittiGidiyorProductFromLink($request->get('link'));
+            } catch (\Throwable $exception) {
+                throw ValidationException::withMessages(['link' => 'Product details cannot be fetched.']);
+            }
+        }
 
         $values = [
             'user_id' => Auth::id(),
@@ -231,10 +240,10 @@ class ProductController extends Controller
         if (!$productImageNode) {
             throw new \RuntimeException('Product image link cannot be found.');
         }
-        if(count($productImageNode->getElementsByTagName('a')) !== 0){
-         $productImage = $productImageNode->getElementsByTagName('a')->item(0)->getAttribute('href');
+        if (count($productImageNode->getElementsByTagName('a')) !== 0) {
+            $productImage = $productImageNode->getElementsByTagName('a')->item(0)->getAttribute('href');
 
-        } else if (count($productImageNode->getElementsByTagName('img')) !== 0){
+        } else if (count($productImageNode->getElementsByTagName('img')) !== 0) {
             $productImage = $productImageNode->getElementsByTagName('img')->item(0)->getAttribute('data-original');
         }
 
@@ -242,6 +251,55 @@ class ProductController extends Controller
         if (!$productImage) {
             throw new \RuntimeException('Product image link does not have a src attribute.');
         }
+
+        return [
+            'productName' => $productName,
+            'productPrice' => $productPrice,
+            'productImage' => $productImage,
+        ];
+    }
+
+
+    private function fetchGittiGidiyorProductFromLink(string $link)
+    {
+        $response = Http::get($link);
+        $content = $response->getBody();
+
+        $doc = new DOMDocument();
+        libxml_use_internal_errors(true);
+        $doc->loadHTML($content);
+        $finder = new \DOMXPath($doc);
+
+        $productNameNode = $finder->query("//*[contains(@id, 'sp-title')]")->item(0);
+        if (!$productNameNode) {
+            throw new \RuntimeException("Product name cannot be found.");
+        }
+
+        $productName = $productNameNode->nodeValue;
+        if (!$productName) {
+            throw new \RuntimeException('Product name is empty.');
+        }
+
+        $productPriceNode = $finder->query("//*[contains(@id, 'sp-price-highPrice')]")->item(0);
+        if (!$productPriceNode) {
+            throw new \RuntimeException('Product price cannot be found.');
+        }
+
+        $productPrice = (float)$productPriceNode->nodeValue;
+        if (!$productPrice) {
+            throw new \RuntimeException('Product price node does not have a content attribute.');
+        }
+
+        $productImageNode = $finder->query("//*[contains(@id, 'big-photo')]")->item(0);
+        if (!$productImageNode) {
+            throw new \RuntimeException('Product image link cannot be found.');
+        }
+
+        $productImage = $productImageNode->getAttribute('src');
+        if (!$productImage) {
+            throw new \RuntimeException('Product image link does not have a src attribute.');
+        }
+
 
         return [
             'productName' => $productName,
